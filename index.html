@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinder de Hoteles - Despegar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Pantalla 1: Bienvenida -->
+    <div id="welcome-screen" class="screen active">
+        <div class="container">
+            <div class="logo">🏨</div>
+            <h1>Tinder de Hoteles</h1>
+            <p class="subtitle">Descubre tu hotel ideal con un swipe</p>
+            
+            <form id="welcome-form">
+                <input type="text" id="user-name" placeholder="Tu nombre" required>
+                <input type="email" id="user-email" placeholder="Tu email" required>
+                <button type="submit" class="btn-primary">Empezar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Pantalla 2: Swipe -->
+    <div id="swipe-screen" class="screen">
+        <div class="container">
+            <div class="header">
+                <h2>Desliza y elige</h2>
+                <p class="counter"><span id="current-hotel">1</span> de <span id="total-hotels">10</span></p>
+            </div>
+
+            <div class="card-container">
+                <div id="hotel-card" class="hotel-card">
+                    <img id="hotel-image" src="" alt="Hotel">
+                    <div class="card-content">
+                        <h3 id="hotel-name"></h3>
+                        <div class="hotel-rating">
+                            <span id="hotel-stars"></span>
+                        </div>
+                        <p class="hotel-price" id="hotel-price"></p>
+                        <div class="hotel-tags" id="hotel-tags"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button id="btn-dislike" class="btn-circle btn-dislike">❌</button>
+                <button id="btn-like" class="btn-circle btn-like">✅</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pantalla 3: Resultados -->
+    <div id="results-screen" class="screen">
+        <div class="container">
+            <h1>¡Gracias <span id="result-name"></span>!</h1>
+            <p class="subtitle">Estas son tus recomendaciones personalizadas</p>
+
+            <div id="recommendations-list"></div>
+
+            <button id="btn-restart" class="btn-primary">Reiniciar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
